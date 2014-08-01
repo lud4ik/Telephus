@@ -11,5 +11,10 @@ setup(
     author='brandon@faltering.com',
     url='http://github.com/driftx/Telephus',
     packages=['telephus',
-              'telephus.cassandra']
+              'telephus.cassandra'],
+    requires=[
+        'Twisted (==13.0)',
+        'thrift (>=0.9.1)',
+        'blist (==1.3.6)',
+    ],
 )
