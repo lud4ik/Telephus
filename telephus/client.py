@@ -404,3 +404,18 @@ class CassandraClient(object):
         consistency = consistency or self.consistency
         req = ManagedThriftRequest('execute_cql3_query', query, compression, consistency)
         return self.manager.pushRequest(req, retries=retries)
+
+    # prepared query support
+    def prepare_cql3_query(self, query,
+                           compression=ttypes.Compression.NONE, retries=None):
+        req = ManagedThriftRequest('prepare_cql3_query',
+                                   query, compression)
+        return self.manager.pushRequest(req, retries=retries)
+
+    def execute_prepared_cql3_query(self, query_id, values,
+                                    consistency=None, retries=None):
+        consistency = consistency or self.consistency
+        req = ManagedThriftRequest('execute_prepared_cql3_query',
+                                   query_id, values,
+                                   consistency)
+        return self.manager.pushRequest(req, retries=retries)
