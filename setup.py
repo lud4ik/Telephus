@@ -16,5 +16,6 @@ setup(
         'Twisted (==13.0)',
         'thrift (>=0.9.1)',
         'blist (==1.3.6)',
+        'puresasl (>=0.1.5)',
     ],
 )
