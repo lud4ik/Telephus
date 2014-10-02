@@ -12,10 +12,10 @@ setup(
     url='http://github.com/driftx/Telephus',
     packages=['telephus',
               'telephus.cassandra'],
-    requires=[
-        'Twisted (==13.0)',
-        'thrift (>=0.9.1)',
-        'blist (==1.3.6)',
-        'puresasl (>=0.1.5)',
+    install_requires=[
+        'Twisted == 13.0',
+        'thrift >= 0.9.1',
+        'blist == 1.3.6',
+        'puresasl >= 0.1.5',
     ],
 )
