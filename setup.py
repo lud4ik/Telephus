@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from distutils.core import setup
+from setuptools import setup
 
 
 setup(
@@ -13,9 +13,9 @@ setup(
     packages=['telephus',
               'telephus.cassandra'],
     install_requires=[
-        'Twisted == 13.0',
-        'thrift >= 0.9.1',
-        'blist == 1.3.6',
-        'puresasl >= 0.1.5',
+        'Twisted==13.0',
+        'thrift>=0.9.1',
+        'blist==1.3.6',
+        'pure-sasl>=0.1.5',
     ],
 )
