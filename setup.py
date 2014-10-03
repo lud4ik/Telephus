@@ -5,7 +5,7 @@ from setuptools import setup
 
 setup(
     name='telephus',
-    version='1.0.0~beta1',
+    version='1.0.0',
     description=('connection pooled, low-level client API for Cassandra in '
                  'Twisted (Python)'),
     author='brandon@faltering.com',
